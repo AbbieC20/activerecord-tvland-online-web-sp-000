@@ -15,17 +15,3 @@ class Character < ActiveRecord::Base
   end
 
 end
-
-it "can build its associated show" do
-  jules_cobb = Character.new(name: "Jules Cobb")
-  jules_cobb.build_show(name: "Cougar Town")
-  expect(jules_cobb.show.name).to eq("Cougar Town")
-end
-
-it "can chain-build associations to which it belongs" do
-  malcolm = Character.new(name: "Malcolm Reynolds")
-  malcolm.build_show(name: "Firefly").build_network(:call_letters => "Fox")
-  show = malcolm.show
-  expect(show.name).to eq("Firefly")
-  expect(show.network.call_letters).to eq("Fox")
-end
