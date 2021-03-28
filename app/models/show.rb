@@ -7,7 +7,7 @@ class Show < ActiveRecord::Base
   end
 
   def build_network(call_letters:)
-    self.show = Network.new(call_letters: call_letters)
+    self.network = Network.new(call_letters: call_letters)
   end
 
 end
