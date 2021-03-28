@@ -7,12 +7,6 @@ class Actor < ActiveRecord::Base
   end
 
   def list_roles
-  end 
+  end
 
 end
-
-# has associated characters in an array
-# can build its associated characters
-# can build its associated shows through its characters
-# can list its full name
-# can list all of its shows and characters
