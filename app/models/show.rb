@@ -6,4 +6,8 @@ class Show < ActiveRecord::Base
     self.characters.map {|character| character.actor.full_name}
   end
 
+  def build_network(call_letters:)
+    self.show = Network.new(call_letters: call_letters)
+  end
+
 end
