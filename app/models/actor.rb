@@ -10,3 +10,5 @@ class Actor < ActiveRecord::Base
   end
 
 end
+
+# return an array which contains 'character - show'
