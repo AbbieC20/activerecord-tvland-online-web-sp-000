@@ -7,5 +7,3 @@ class Show < ActiveRecord::Base
   end
 
 end
-
-# self.characters.map {|character| "#{character.name} - #{character.show.name}"}
