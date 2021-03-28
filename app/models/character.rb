@@ -10,6 +10,10 @@ class Character < ActiveRecord::Base
     self.show = Show.new(name: name)
   end
 
+  def build_network(call_letters:)
+    self.show = Network.new(call_letters: call_letters)
+  end
+
 end
 
 it "can build its associated show" do
